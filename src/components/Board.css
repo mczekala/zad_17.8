@@ -1,0 +1,10 @@
+.Line {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: DodgerBlue;
+    justify-content: space-around;
+}
+
+body {
+    text-align: center;
+}
