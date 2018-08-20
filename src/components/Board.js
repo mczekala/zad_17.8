@@ -4,11 +4,7 @@ import { Tile } from "./Tile";
 import style from "./Board.css";
 
 class Board extends React.Component {
-  constructor(props) {
-    super(props);
-    this.generate = this.generate.bind(this);
-  }
-  generate() {
+  render() {
     let id = 0;
     return sudoku.board_string_to_grid(this.props.sudoku).map(line => (
       <div key={id + 200} className={style.Line} >
@@ -18,10 +14,7 @@ class Board extends React.Component {
           ))
         }
       </div>
-    ));
-  }
-  render() {
-    return this.generate();
+    ))
   }
 }
 export default Board;

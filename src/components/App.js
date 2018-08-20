@@ -35,14 +35,15 @@ class App extends React.Component {
     });
   }
   onCheck() {
+    const sudokuSize = 81;
     const solution = sudoku.solve(this.state.initSudoku);
     let correct = 0;
-    for (let i = 0; i < 81; i++) {
+    for (let i = 0; i < sudokuSize; i++) {
       if (((this.state.sudoku[i] === solution[i]) || (this.state.sudoku[i] === '.'))) {
         correct++;
       }
     }
-    if (correct === 81) {
+    if (correct === sudokuSize) {
       alert('dobrze');
     }
     else {
